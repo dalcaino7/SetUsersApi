@@ -10,7 +10,7 @@ Asegúrate de tener instaladas las siguientes herramientas antes de comenzar:
 
 ## Configuración y ejecución del Proyecto
 
-1. Clona este repositorio: `git clone https://github.com/dalcaino/tu-proyecto.git`
+1. Clona este repositorio: `git clone https://github.com/dalcaino7/SetUsersApi.git`
 2. Navega al directorio del proyecto: `cd tu-proyecto`
 3. Ejecuta la aplicación: `mvn spring-boot:run`
 
