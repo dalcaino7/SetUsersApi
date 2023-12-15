@@ -5,15 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponseDto implements Serializable {
+public class LoginDto implements Serializable {
 
-    public String id;
-    public String created;
-
+    private String email;
+    private String password;
 
 }

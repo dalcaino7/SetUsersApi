@@ -16,16 +16,16 @@ public class Phone implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_phone", nullable = false, updatable = false)
-    public Long idPhone;
+    private Long idPhone;
 
     @Column(name="number")
-    public String number;
+    private String number;
 
     @Column(name="city_code")
-    public String cityCode;
+    private String cityCode;
 
     @Column(name="country_code")
-    public String countryCode;
+    private String countryCode;
 
     //@JsonIgnoreProperties(value={"phones","hibernateLazyInitializer","handler"}, allowSetters=true)
     //@ManyToOne(fetch = FetchType.LAZY)

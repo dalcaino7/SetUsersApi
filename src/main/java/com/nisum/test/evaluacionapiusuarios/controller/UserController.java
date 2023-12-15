@@ -1,5 +1,6 @@
 package com.nisum.test.evaluacionapiusuarios.controller;
 
+import com.nisum.test.evaluacionapiusuarios.dto.LoginDto;
 import com.nisum.test.evaluacionapiusuarios.dto.UserDto;
 import com.nisum.test.evaluacionapiusuarios.dto.UserResponseDto;
 import com.nisum.test.evaluacionapiusuarios.model.repository.UserRepository;
@@ -30,18 +31,30 @@ public class UserController {
 
 
     @GetMapping(value = "/user", produces = "application/json")
-    public List<UserDto> findAllUsers() throws Exception {
+    public List<UserDto> findAllUsers( @RequestHeader(name = "Authorization", required = false) String token) throws Exception {
+
+        //TODO: quedo pendiente validar token.
+
         return userService.findAll();
     }
 
     @PostMapping("/user")
-    public ResponseEntity<?> addUser(@RequestBody UserDto userDto) throws Exception {
+    public ResponseEntity<?> addUser(@RequestBody UserDto userDto,
+                                     @RequestHeader(name = "Authorization", required = false) String token) throws Exception {
 
         userResponseDto = userService.saveUser(userDto);
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(userResponseDto);
+        //TODO: quedo pendiente validar token.
 
-        // return userRepository.save(usuario);
+        return ResponseEntity.status(HttpStatus.CREATED).body(userResponseDto);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginDto loginDto) throws Exception {
+        UserDto userDto =userService.login(loginDto);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(userDto);
+    }
+
+
 }
 

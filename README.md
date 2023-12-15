@@ -11,12 +11,14 @@ Asegúrate de tener instaladas las siguientes herramientas antes de comenzar:
 ## Configuración y ejecución del Proyecto
 
 1. Clona este repositorio: `git clone https://github.com/dalcaino7/SetUsersApi.git`
-2. Navega al directorio del proyecto: `cd tu-proyecto`
+2. Navega al directorio del proyecto: `cd Evaluacion-ApiUsuarios`
 3. Ejecuta la aplicación: `mvn spring-boot:run`
 
 La aplicación estará disponible en `http://localhost:8080`.
 
 La BD H2 la puedes consultar en: `http://localhost:8080/h2-console`.
+- user: sa
+- password: sa
 
 ## Documentación de la API
 

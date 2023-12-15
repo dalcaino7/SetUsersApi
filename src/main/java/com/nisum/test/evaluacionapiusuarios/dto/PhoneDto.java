@@ -11,10 +11,10 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PhoneDto implements Serializable {
-    public Long idPhone;
-    public String number;
-    public String cityCode;
-    public String countryCode;
+    private Long idPhone;
+    private String number;
+    private String cityCode;
+    private String countryCode;
 
    // @JsonIgnore
    // public UserDto user;
